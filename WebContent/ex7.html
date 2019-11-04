@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 1. 함수 이름의 관례는 보통 소문자로 시작(Java와 같음)
+var myFunction = function(){
+	console.log('Hello World');
+}
+// 2. 생성자 함수 이름의 관례는 보통 대문자로 시작
+var MyObject = function(name, age){
+	this.name = name;
+	this.age = age
+}
+MyObject.prototype.num = 10;
+MyObject.prototype.s = 'hello';
+
+myFunction();
+var myObject1 = new MyObject("둘리", 10);
+var myObject2 = new MyObject("마이콜", 20);
+console.log(myObject1 + ":" + myObject2);
+//생성자 함수는 일반함수를 호출하는 방법으로 사용하는 것이 아니다.
+//MyObject("helloooooooooooo", 10);
+
+console.log(myObject1.name + ":" + myObject2.age);
+console.log(myObject1.num + ":" + myObject2.s);
+</script>
+</head>
+<body>
+	<h1>function 객체 정의/생성</h1>
+</body>
+</html>
